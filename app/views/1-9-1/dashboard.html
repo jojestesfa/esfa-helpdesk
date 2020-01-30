@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Search for a provider
+        <span class="govuk-caption-m">View their submission history and reports</span>
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-width-two-thirds" for="search-provider">
+          Enter a provider name, UKPRN or UPIN
+        </label>
+
+        <input class="govuk-input govuk-!-width-two-thirds" id="search-provider" name="search-provider" type="text" aria-describedby="search-provider-hint">
+        <a href="search-results.html" type="submit" class="govuk-button search-provider-button">
+          Search
+        </a>
+      </div>
+
+      <!-- <div>
+        <h2 class="govuk-heading-l">Known issues</h2>
+        <span class="govuk-heading-s">ILR – new this period</span>
+         <p class="govuk-body"><a href="duplicate-records.html">Duplicated records - 14/02/19</a></p>
+        <p class="govuk-body">14/02/19 - Occurs when information is returned in ‘Primary LLDD and health problem’.</p>
+
+        <p class="govuk-body"><a href="data-resetting.html">Learner HE information is resetting to 999999 - 7/2/19</a></p>
+        <p class="govuk-body">Occurs when you exceed the maximum field length. Affects these fields:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Financial support amount for cash</li>
+            <li>Near cash</li>
+            <li>Accommodation discounts</li>
+            <li>Other fields</li>
+
+        </ul>
+
+        <p class="govuk-body"><a href="all-issues.html">Older issues</a></p>
+        <span class="govuk-heading-s">FIS - new this period</span>
+        <p class="govuk-body">No new issues</p>
+        <p><a href="all-issues.html">Older issues</a></p>
+      </div> -->
+
+
+</div>
+      <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+
+</div>
+
+{% endblock %}

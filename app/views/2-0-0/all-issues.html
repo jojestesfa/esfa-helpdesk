@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        All issues
+      </h1>
+      <h2 class="govuk-heading-m">ILR issues</h2>
+      <ul class="govuk-list">
+         <!-- govuk-list--bullet -->
+          <li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/775662/ILR_Learner_Entry_Tool_known_issues_201819_January_28.xlsx">2018/19 all ILR issues</a></li>
+          <li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717181/ILR_Learner_Entry_Tool_known_issues_2018_30May.xlsx">2017/18 all ILR issues</a></li>
+
+          <!-- <li><a href="1-7-0/search-results.html">Added in active collection types</a></li> -->
+      </ul>
+
+      <h2 class="govuk-heading-m">FIS issues</h2>
+      <ul class="govuk-list">
+         <!-- govuk-list--bullet -->
+          <li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/780465/FIS_DC_DataReturns_known_issues_201819__February_19022019.xlsx">2018/19 all FIS issues</a></li>
+          <li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/748559/FIS_DC_DataReturns_known_issues_201718__October_15102018.xlsx">2017/18 all FIS issues</a></li>
+
+          <!-- <li><a href="1-7-0/search-results.html">Added in active collection types</a></li> -->
+      </ul>
+    </div>
+  </div>
+
+
+{% endblock %}

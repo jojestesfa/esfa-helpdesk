@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find a provider  
+      </h1>
+        <div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-two-thirds" for="search-provider">
+    Search for a provider
+  </label>
+  <span id="search-provider-hint" class="govuk-hint">
+    You can use the provider name, UKPRN or UPIN
+  </span>
+  <input class="govuk-input govuk-!-width-two-thirds" id="search-provider" name="search-provider" type="text" aria-describedby="search-provider-hint">
+</div>
+<a href="search-results.html" type="submit" class="govuk-button">
+  Search
+</a>
+		
+</div>
+      <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+      
+</div>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="search-results.html" class="govuk-back-link">Back to search results</a>
+  </div>
+  <div class="govuk-grid-column-one-third margin-top-20">
+
+    <label class="govuk-label govuk-!-width-two-thirds " for="search-provider">
+       Search for a provider
+    </label>
+          <div class="mt15">
+            <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider" placeholder="Name or UKPRN"
+            type="search" value="" aria-describedby="provider-search"> <a href="search-results.html" type="submit" class="govuk-button">Search</a>
+          </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">Reports</h1>
+
+  <p>These downloads contain the Adult Education Funding Summary report and Adult Education Occupancy report.</p>
+
+
+
+  <div class="year-groups 19">
+    <h3 class="govuk-heading-m">Academic year 2019 to 2020</h3>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-visually-hidden">Return period and download</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+          <th class="govuk-table__header" scope="col">Return period</th>
+          <th class="govuk-table__header" scope="col">Reports at period end</th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R03</th>
+          <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download 2019-20-R03</a>  (zip, 1.3MB)</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R02</th>
+          <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download 2019-20-R02</a>  (zip, 1.3MB)</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="row">R01</th>
+          <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Download 2019-20-R01</a>  (zip, 1.3MB)</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+</div>
+
+<!-- <div class="govuk-grid-column-two-thirds">
+  <h3 class="govuk-heading-s">ESFA support desk</h3>
+  <p>For help and support call us on 0370 267 0001, Monday to Thursday, 8:30am-5pm, or Fridays, 8.30am-4pm. Or
+  log a query on the <a target="blank" href="https://form.education.gov.uk/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-f9f4f5a1-936f-448b-bbeb-9dcdd595f468/AF-Stage-8aa41278-3cdd-45a3-ad87-80cbffb8b992/definition.json&redirectlink=%2Fen&cancelRedirectLink=%2Fen&consentMessage=yes">Enquiery form</a>.</p>
+</div> -->
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,336 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="search-results.html" class="govuk-back-link">Back to search results</a>
+  </div>
+  <div class="govuk-grid-column-one-third margin-top-20">
+
+    <label class="govuk-label govuk-!-width-two-thirds " for="search-provider">
+       Search for a provider
+    </label>
+    <div class="mt15">
+      <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider" placeholder="Name or UKPRN"
+      type="search" value="" aria-describedby="provider-search"> <a href="search-results.html" type="submit" class="govuk-button">Search</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Manchester provider 1 <span class="govuk-caption-l">UKPRN: 12345, UPIN: 1234</span></h1>
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+<ul class="govuk-list">
+  <li>
+    <a href="provider-record" class="govuk-link">Submissions</a>
+  </li>
+  <li>
+    <a href="funding-claims" class="govuk-link">Funding claim submissions</a>
+  </li>
+</ul>
+
+</div>
+
+<div class="govuk-grid-column-full">
+  <h2 class="govuk-tabs__title">
+    Activity for Manchester provider 1
+  </h2>
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+
+
+      </fieldset>
+    </div>
+
+
+<h3 class="govuk-heading-m">Unsubmitted files for R02 - 2019 to 2020
+  <!-- <span class="govuk-caption-m">ESF: 2019_02_Supp</span> -->
+</h3>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Date</th>
+        <!-- <th class="govuk-table__header" scope="col">Type</th> -->
+      <th class="govuk-table__header" scope="col">File</th>
+         <th class="govuk-table__header" scope="col">Uploaded by</th>
+        <th class="govuk-table__header" scope="col">Reference</th>
+    <th class="govuk-table__header" scope="col">Reports</th>
+
+    </tr>
+  </thead>
+  <tbody id="submissions" class="govuk-table__body">
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">10 September 2019 at 4:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell">350</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+    </tr>
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">9 September 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell">300</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+    </tr>
+    <tr class="govuk-table__row esf">
+      <th class="govuk-table__header" scope="row">9 September 2019 at 8:00am</th>
+        <!-- <td class="govuk-table__cell">ESF</td> -->
+        <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">295</td>
+        <td class="govuk-table__cell">Failed</td>
+
+    </tr>
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">8 September 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">200</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+    </tr>
+    <tr class="govuk-table__row eas">
+      <th class="govuk-table__header" scope="row">7 September 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">EAS</td> -->
+        <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">500</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="govuk-heading-m">Unsubmitted files for R01 - 2019 to 2020
+  <!-- <span class="govuk-caption-m">ESF: 2019_02_Supp</span> -->
+</h3>
+
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Date</th>
+      <!-- <th class="govuk-table__header" scope="col">Type</th> -->
+    <th class="govuk-table__header" scope="col">File</th>
+       <th class="govuk-table__header" scope="col">Uploaded by</th>
+      <th class="govuk-table__header" scope="col">Reference</th>
+  <th class="govuk-table__header" scope="col">Reports</th>
+
+  </tr>
+</thead>
+<tbody id="submissions" class="govuk-table__body">
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">5 September 2019 at 4:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+      <td class="govuk-table__cell">350</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">5 September 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+      <td class="govuk-table__cell">300</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+  </tr>
+  <tr class="govuk-table__row esf">
+    <th class="govuk-table__header" scope="row">5 September 2019 at 8:00am</th>
+      <!-- <td class="govuk-table__cell">ESF</td> -->
+      <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">295</td>
+      <td class="govuk-table__cell">Failed</td>
+
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">4 September 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">200</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row eas">
+    <th class="govuk-table__header" scope="row">3 September 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">EAS</td> -->
+      <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">500</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+  </tr>
+</tbody>
+</table>
+
+
+<h3 class="govuk-heading-m">Unsubmitted files for R14 - 2018 to 2019
+  <!-- <span class="govuk-caption-m">ESF: 2019_02_Supp</span> -->
+</h3>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Date</th>
+        <!-- <th class="govuk-table__header" scope="col">Type</th> -->
+      <th class="govuk-table__header" scope="col">File</th>
+         <th class="govuk-table__header" scope="col">Uploaded by</th>
+        <th class="govuk-table__header" scope="col">Reference</th>
+    <th class="govuk-table__header" scope="col">Reports</th>
+
+    </tr>
+  </thead>
+  <tbody id="submissions" class="govuk-table__body">
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">24 August 2019 at 4:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell">350</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+    </tr>
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">24 August 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell">300</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+    </tr>
+    <tr class="govuk-table__row esf">
+      <th class="govuk-table__header" scope="row">23 August 2019 at 8:00am</th>
+        <!-- <td class="govuk-table__cell">ESF</td> -->
+        <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">295</td>
+        <td class="govuk-table__cell">Failed</td>
+
+    </tr>
+    <tr class="govuk-table__row ilr">
+      <th class="govuk-table__header" scope="row">22 August 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">ILR</td> -->
+        <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">200</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+    </tr>
+    <tr class="govuk-table__row eas">
+      <th class="govuk-table__header" scope="row">21 August 2019 at 1:00pm</th>
+        <!-- <td class="govuk-table__cell">EAS</td> -->
+        <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+        <td class="govuk-table__cell">Bob Afett</td>
+         <td class="govuk-table__cell">500</td>
+        <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 class="govuk-heading-m">Unsubmitted files for R13 - 2018 to 2019
+  <!-- <span class="govuk-caption-m">ESF: 2019_02_Supp</span> -->
+</h3>
+
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-visually-hidden">Dates and file name</caption>
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Date</th>
+      <!-- <th class="govuk-table__header" scope="col">Type</th> -->
+    <th class="govuk-table__header" scope="col">File</th>
+       <th class="govuk-table__header" scope="col">Uploaded by</th>
+      <th class="govuk-table__header" scope="col">Reference</th>
+  <th class="govuk-table__header" scope="col">Reports</th>
+
+  </tr>
+</thead>
+<tbody id="submissions" class="govuk-table__body">
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">19 August 2019 at 4:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+      <td class="govuk-table__cell">350</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">18 August 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-02.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+      <td class="govuk-table__cell">300</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+  </tr>
+  <tr class="govuk-table__row esf">
+    <th class="govuk-table__header" scope="row">17 August 2019 at 8:00am</th>
+      <!-- <td class="govuk-table__cell">ESF</td> -->
+      <td class="govuk-table__cell"><a href="#">SUPPDATA-12345678-ESF-8976-20180806-151209.CSV</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">295</td>
+      <td class="govuk-table__cell">Failed</td>
+
+  </tr>
+  <tr class="govuk-table__row ilr">
+    <th class="govuk-table__header" scope="row">16 August 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">ILR</td> -->
+      <td class="govuk-table__cell"><a href="#">ILR-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">200</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+  </tr>
+  <tr class="govuk-table__row eas">
+    <th class="govuk-table__header" scope="row">15 August 2019 at 1:00pm</th>
+      <!-- <td class="govuk-table__cell">EAS</td> -->
+      <td class="govuk-table__cell"><a href="#">EAS-12345678-1819-20180806-05092018-01.XML</a></td>
+      <td class="govuk-table__cell">Bob Afett</td>
+       <td class="govuk-table__cell">500</td>
+      <td class="govuk-table__cell"><a href="#" title="Download REPORTS-0312210-091400.zip">Validation reports</a></td>
+
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}

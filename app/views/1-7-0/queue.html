@@ -1,0 +1,119 @@
+
+{% extends "layout_blank.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<a href="lynn.html" class="govuk-back-link">Back to dashboard</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Queue
+      </h1>
+             
+       
+              
+       
+      </div>
+</div>
+      <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+   <div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-full" for="full">
+    Provider name
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="full" name="full" type="text" placeholder="Manchester">
+</div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+   <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Status
+  </label>
+  <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+    <option value="1">Processing</option>
+    <option value="2" selected>Failed</option>
+    <option value="3">Completed</option>    
+  </select>
+</div>
+</div>
+
+  <div class="govuk-grid-column-one-third">
+   <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+    <option value="1">EAS</option>
+    <option value="2" selected>ILR</option>
+    <option value="3">ESF</option>    
+  </select>
+        <button type="submit" class="govuk-button">
+  Filter
+</button>
+</div>
+  </div>
+</div> 
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+        
+       <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Queue</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Provider</th>
+      <th class="govuk-table__header govuk-table__header" scope="col">Type</th>
+      <th class="govuk-table__header govuk-table__header" scope="col">Status</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">By</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-table__cell">Manchester provider 1<br/>123456</td>
+      <td class="govuk-table__cell govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell govuk-table__cell">Failed</td>
+        <td class="govuk-table__cell govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell govuk-table__cell"><a href="#">Resubmit file</a>
+  </td>
+    </tr>
+    <tr class="govuk-table__row">
+       <td class="govuk-table__cell govuk-table__cell">Manchester provider 2<br/>123456</td>
+      <td class="govuk-table__cell govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell govuk-table__cell">Failed</td>
+        <td class="govuk-table__cell govuk-table__cell">Bob Afett</td>
+        <td class="govuk-table__cell govuk-table__cell"><a href="#">Resubmit file</a>
+  </td>
+    </tr>
+    <tr class="govuk-table__row">
+     <td class="govuk-table__cell govuk-table__cell">Manchester provider 3<br/>123456</td>
+      <td class="govuk-table__cell govuk-table__cell">ILR</td>
+      <td class="govuk-table__cell govuk-table__cell">Failed</td>
+        <td class="govuk-table__cell govuk-table__cell">DCT</td>
+        
+    <td class="govuk-table__cell govuk-table__cell"><a href="#">Resubmit file</a>
+ </td>
+    </tr>
+  </tbody>
+</table>
+       
+    </div>
+    
+</div>
+
+
+{% endblock %}

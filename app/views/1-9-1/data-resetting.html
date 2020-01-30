@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Learner HE information is resetting to 999999
+      </h1>
+
+
+        <h2 class="govuk-heading-m">7 February 2019</h2>
+        <h3 class="govuk-heading-s">Summary</h3>
+        <p class="govuk-body">Occurs when you exceed the maximum field length. Affects these fields:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Financial support amount for cash</li>
+            <li>Near cash</li>
+            <li>Accommodation discounts</li>
+            <li>Other fields</li>
+            <!-- <li><a href="1-7-0/search-results.html">Added in active collection types</a></li> -->
+        </ul>
+
+        <h3 class="govuk-heading-s">More detail</h3>
+        <p class="govuk-body">This won’t be fixed in the 2018/19 academic year.</p>
+        <h3 class="govuk-heading-s">Advice</h3>
+        <p class="govuk-body">Please take extra care when entering information in the fields above.</p>
+
+
+
+
+</div>
+      <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+
+</div>
+
+{% endblock %}

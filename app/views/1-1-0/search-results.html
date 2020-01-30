@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        
+          <h1 class="govuk-heading-xl"><label for="provider-search">Search
+                results for <span class=
+                "govuk-visually-hidden">“Manchester”</span></label></h1>
+                <div class="govuk-form-group">                   
+                    <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider"
+                    type="search" value="Manchester" aria-describedby="provider-search"> <a href="search-results.html" type="submit" class="govuk-button">
+  Search
+</a>
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+ <p>3 results found.</p> 
+                    
+                    <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 1</a></h3>
+                    <ul class="govuk-list">
+                        <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>                        
+                        <li><span class="govuk-!-font-weight-bold">Last submission by:</span> Bob Franks (bob.franks@test.com)</li>
+                    
+                    
+                    
+                    </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                     <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 2</a></h3>
+                    <ul class="govuk-list">
+                        <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>                       
+                        <li><span class="govuk-!-font-weight-bold">Last submission by:</span> Ann Franks (ann.franks@test.com)
+                            </li>                   
+                    
+                    
+                    </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                     <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 3</a></h3>
+                    <ul class="govuk-list">
+                        <li><span class="govuk-!-font-weight-bold">UKPRN:</span> 12345</li>                        
+                        <li><span class="govuk-!-font-weight-bold">Last submission by:</span> Ian Franks (Ian.franks@test.com)</li>
+                    
+                    
+                    
+                    </ul>
+ 
+		
+</div>
+</div>
+       <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+</div>
+
+{% endblock %}

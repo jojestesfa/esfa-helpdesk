@@ -1,0 +1,81 @@
+
+{% extends "layout_blank.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+          <h1 class="govuk-heading-xl"><label for="provider-search">Search
+                results for <span class=
+                "govuk-visually-hidden">“Manchester”</span></label></h1>
+                <div class="govuk-form-group">
+                    <input class="govuk-input govuk-!-width-two-thirds" id="provider-search" name="search-provider"
+                    type="search" value="Manchester" aria-describedby="provider-search"> <a href="search-results.html" type="submit" class="govuk-button search-provider-button">
+  Search
+</a>
+  <p>3 results found.</p>
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+    <h3 class="govuk-heading-m"><a href="authority-record.html">Combined Authority 1</a>
+      <span class="govuk-caption-m">UKPRN: 12345</span>
+    </h3>
+   <ul class="govuk-list">
+      <li class="govuk-!-font-weight-bold">Last submitted files</li>
+     <li><span class="govuk-!-font-weight-bold">Mayoral reports </span>Tuesday 26 September </li>
+   </ul>
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                    <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 1</a>
+                      <span class="govuk-caption-m">UKPRN: 12345</span>
+                    </h3>
+                    <ul class="govuk-list">
+                        <li class="govuk-!-font-weight-bold">Last submitted files</li>
+                        <li><span class="govuk-!-font-weight-bold">ILR1819 </span>Monday 14 January by Bob Franks</li>
+                        <li><span class="govuk-!-font-weight-bold">ESF-SUPP/1819 </span>Friday 11 January by Bob Franks</li>
+                        <li><span class="govuk-!-font-weight-bold">EAS1819 </span>Wednesday 9 January by Bob Franks</li>
+                        <!-- <li><span class="govuk-!-font-weight-bold">Active collection types:</span> ILR, EAS, ESF</li> -->
+
+
+
+                    </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                     <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 2</a>
+                      <span class="govuk-caption-m">UKPRN: 12345</span>
+                    </h3>
+                    <ul class="govuk-list">
+                        <li class="govuk-!-font-weight-bold">Last submitted files</li>
+                        <li><span class="govuk-!-font-weight-bold">ILR1819 </span>Monday 7 January by Ann Franks</li>
+                        <li><span class="govuk-!-font-weight-bold">ESF-SUPP/1819 </span> Monday 7 January by Ann Franks</li>
+                        <!-- <li><span class="govuk-!-font-weight-bold">Active collection types:</span> ILR, ESF</li> -->
+
+                    </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    <h3 class="govuk-heading-m"><a href="provider-record.html">Manchester provider 3</a>
+                      <span class="govuk-caption-m">UKPRN: 12345</span>
+                    </h3>
+                    <ul class="govuk-list">
+                        <li class="govuk-!-font-weight-bold">Last submitted files</li>
+                        <li><span class="govuk-!-font-weight-bold">EAS1819 </span>Wednesday 9 January by Ian Franks</li>
+                        <!-- <li><span class="govuk-!-font-weight-bold">Active collection types:</span> ILR, EAS</li> -->
+
+
+                    </ul>
+
+
+
+</div>
+</div>
+       <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+</div>
+
+{% endblock %}

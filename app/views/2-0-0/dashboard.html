@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Submit learner data support interface
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Helpdesk
+        <span class="govuk-caption-l">View provider submission history and reports</span>
+      </h1>
+
+      
+      <div class="standard-search">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-body white-text">Search for a provider</span>
+            <br> <br>
+            <form class="govuk-form-group" action="provider-record">
+              <div id="tt-overlay" class="autocomplete-wrapper"></div>
+              <button id="searchProviders" type="search" class="govuk-button" ><img src="https://assets.publishing.service.gov.uk/frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png"></img></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+
+
+</div>
+      <div class="govuk-grid-column-one-third">
+    {% include "./includes/sidebar_help.html" %}
+  </div>
+
+</div>
+
+{% include "./includes/auto-js.html" %}
+
+{% endblock %}
